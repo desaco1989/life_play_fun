@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>我的外卖</title>
+	<link rel="stylesheet" type="text/css" href="../fun_css/layout.css">
+	<link rel="stylesheet" type="text/javascript" href="/life_play_fun/fun_library/jquery.min.js">
+	<!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> -->
+	<!-- 获取上个页面URL传过来的值 -->
+	<script>    
+		var thisURL = document.URL;    
+		var  getval =decodeURI(thisURL).split('?')[1];  
+		var showval= getval.split("=")[1];  
+		function showNickName(){  
+			//给input标签赋值
+			// document.getElementById('show_url').value=showval; 
+			//给其他标签赋值
+			// <labelid="test"></label>
+			// document.getElementById(test).innerText="";
+			document.getElementById('show_url').innerHTML="昵称："+showval;
+			alert(showval);  
+		}  
+	</script> 
+	<script type="text/javascript">
+
+	</script>
+
+</head>
+
+
+<!-- 我的外卖 外卖分类 onload="showNickName()"-->
+<script type="text/javascript">
+	function loadList(){
+		
+		// var divLists = document.getElementById("lists");
+		// var result; 
+		// for(var i=0; i<5; i++){
+		// 	result += '<p> 标签xxx</p> <hr>';
+		// 	// alert("for 循环");
+		// }
+		// alert(result);
+		// divLists.appendChild(result);
+
+		var para = document.createElement("p");
+		var txt1 = document.createTextNode("I inserted ");
+		var emphasis = document.createElement("em");
+		var txt2 = document.createTextNode("this");
+		var txt3 = document.createTextNode(" content.");
+		para.appendChild(txt1);
+		emphasis.appendChild(txt2);
+		para.appendChild(emphasis);
+		para.appendChild(txt3);
+		var testdiv = document.getElementById("lists");
+		testdiv.appendChild(para);
+	}
+</script>
+<body >
+	<!-- <input type="text"  id ="show_url" />  -->
+	<p id="show_url" style="text-align: right;font-size: 25px;" onload="showNickName()"></p>
+	<p style="text-align: center;font-size: 30px;color: red;">美团外卖</p>
+	<img src="../imgs/my_takeway.jpg" style="width: 100%;height: 450px;">
+	<hr style="background-color: red;line-height:10px;">
+	<ul id="nav_click">
+		<li id="commodity_li"  class="li_style" style="color: red;">商品</li>
+		<li id="details_li" class="li_style" >详情</li>
+		<li id="evaluate_li" class="li_style" >评价</li>
+	</ul>
+
+	<script type="text/javascript">
+
+
+		window.onload = function(){
+			var commodityDiv = document.getElementById("commodity_table");
+			var detailsDiv = document.getElementById("store_details");
+			var evaluateDiv = document.getElementById("store_food_evaluate");
+
+			var commodityLi = document.getElementById("commodity_li");
+			var detailsLi = document.getElementById("details_li");
+			var evaluateLi = document.getElementById("evaluate_li");
+			//获取HTML标签
+			
+			// 遍历Li标签
+			var obj_lis = document.getElementById("nav_click").getElementsByTagName("li");
+
+			for(i=0;i<obj_lis.length;i++){
+				obj_lis[i].index = i;
+				obj_lis[i].onclick = function(){
+					// console.log(this.index);
+					if(this.index == 0){
+						// hidden 属性是 HTML5 中的新属性
+						commodityDiv.style.display = "flex";
+						detailsDiv.style.display ="none";
+						evaluateDiv.style.display ="none";
+
+						commodityLi.style.color = "red";
+						detailsLi.style.color = "black";
+						evaluateLi.style.color = "black";
+						// alert(this.innerHTML+this.index);
+						return false;
+					}else if(this.index == 1){
+						commodityDiv.style.display = "none";
+						detailsDiv.style.display ="flex";
+						evaluateDiv.style.display ="none";
+
+						commodityLi.style.color = "black";
+						detailsLi.style.color = "red";
+						evaluateLi.style.color = "black";
+
+						loadList();
+
+						// alert(this.innerHTML+this.index);
+						return false;
+					}else if(this.index == 2){
+						commodityDiv.style.display = "none";
+						detailsDiv.style.display ="none";
+						evaluateDiv.style.display ="flex";
+
+						commodityLi.style.color = "black";
+						detailsLi.style.color = "black";
+						evaluateLi.style.color = "red";
+						// alert(this.innerHTML+this.index);
+						return false;
+					}
+					
+				}
+			}
+		}
+	</script>
+	<hr style="position:relative;top:30px;">
+	<!-- <hr size = "5" color= "blue"/> -->
+	
+	<div id="commodity_table"  class="flex_box">
+		<div class="list navigate_category">
+			<p class="p_style">全部品类</p>
+
+			<p class="p_style">  
+				<img src="../imgs/discount.png" id="takeway_active">
+				双人套餐
+				
+			</p>
+			<p class="p_style">
+				<img src="../imgs/hot.png" id="takeway_active">
+				冰爽饮品
+			</p>
+			<p class="p_style">
+				<img src="../imgs/special.png" id="takeway_active">
+				限时茶点
+			</p>
+
+			<p class="p_style">异国美食</p>
+			<p class="p_style">家常菜</p>
+			<p class="p_style">经典川湘</p>
+			<p class="p_style">能量西餐</p>
+			<p class="p_style">甜点饮品</p>
+			<p class="p_style">下午茶</p>
+			<p class="p_style">夜宵</p>
+			<p class="p_style">鲜果购</p>
+			<p class="p_style">粥面食单</p>
+			<p class="p_style">快餐小吃</p>
+			<p class="p_style">超市</p>
+		</div>
+		<div class="list takeway_list">
+			菜单列表
+
+		</div>
+		<!-- <div class="list list_one">3</div> -->
+	</div>
+
+
+	<div id="store_details" style="display: none;position: relative;">
+		<p style="margin-top: 40px;font-size: 30px;">详情</p>
+		<div id="lists"></div>
+	</div>
+
+	
+	<div id="store_food_evaluate" style="display: none;position: relative;">
+		<p style="margin-top: 40px;font-size: 30px;">评价</p>
+	</div>
+
+
+</body>
+
+

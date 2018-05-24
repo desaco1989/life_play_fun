@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>首页</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<link rel="stylesheet" type="text/css" href="../fun_css/layout.css">
+</head>
+
+<script type="text/javascript">
+	function submitData(){
+		var usernameTxt = document.getElementById("username_input").value;
+		var pwdTxt = document.getElementById("pwd_input").value;
+		if(usernameTxt == "" ){
+			alert("用户名不能为空");
+			return false;
+		}
+		if(pwdTxt == ""){
+			alert("密码不能为空");
+			return false;
+		}
+		//HTML页面之间跳转与传值（JS代码）; 本地缓存 ; 中文传输:可以在页面a用encodeURI 编码url  在b页面用decodeURI解码url
+		if(usernameTxt == "desaco" && pwdTxt == "123"){
+			document.getElementById("pwd_input").value = "";//将input的值清空
+			var nickName = "desaco";
+			var url = "my_takeaway.html" + "?nickName="+ nickName+"的外卖";
+			// decodeURI(uriec); encodeURI(url)
+			window.location.href = encodeURI(url);
+			return false;
+		}
+		
+	}
+	function replace()  
+	{  
+		window.location.replace("http://www.baidu.com")  
+	}  
+	function new_page()  
+	{  
+		window.open("http://www.sina.com.cn")  
+	}
+</script>
+<body>
+	<!-- <p>测试</p>
+	<table border="1">
+		<tr>
+			<td>表格1</td>
+			<td>表格2</td>
+			<td>表格3</td>
+
+		</tr>
+		<tr>
+			<td>表格4</td>
+			<td>表格5</td>
+			<td>表格6</td>
+		</tr>
+
+	</table>
+	<table >
+		<tr>
+			表格7
+		</tr>
+		<tr>
+			表格8
+		</tr>
+		<tr>
+			表格9	
+		</tr>
+	</table>
+	<hr> -->
+	<!-- style="margin-top: 30px;margin: 5px" -->
+	<!-- <div class="div_center"></div> -->
+	<p >娱乐资讯</p>
+	
+	
+	<!-- 表单提交  如何将这些全部居中？？-->
+	<div>
+		<span class="cell" >
+			<img src="../imgs/user.png" class="img_style">
+			<label>用户名：</label>
+			<input id="username_input" type="text" name="username" class="input_style">
+		</span>
+		<span class="cell">
+			<img src="../imgs/pwd.png" class="img_style">
+			<label>密&nbsp&nbsp&nbsp&nbsp码：</label>
+			<input id="pwd_input" type="password" name="pwd" class="input_style">
+		</span>
+	</div>
+	<br>
+	<p>输入desaco， 123登录</p>
+	<!-- Ajax请求后台，验证用户名，密码 -->
+	<button class="login_bt" onclick="submitData()" return false;>登录</button>
+	<hr>
+
+	<!-- 表单提交。居中的话 先写死div的宽度，然后可以写死label的宽度-->
+	<!-- <div style="text-align: center;width: 320px;">
+	<span class="cell" >
+		<img src="../imgs/user.png" class="img_style">
+		<label>用户名：</label>
+		<input type="text" name="username" class="input_style">
+	</span>
+	<span class="cell">
+		<img src="../imgs/pwd.png" class="img_style">
+		<label>密&nbsp&nbsp&nbsp&nbsp码：</label>
+		<input  type="password" name="pwd" class="input_style">
+	</span>
+</div> -->
+<ul>
+	<li><a href="user_register.html">user_register 注册页面</a></li>
+	<li><a href="video_play.html">video_play 视频播放页</a></li>
+	<li><a href="animation.html">animation 3D旋转木马</a></li>
+
+	<li><a href="refresh_load/index_dropload.html">index_dropload上拉和下拉</a></li>
+	<li><a href="dynamic_add_label.html">dynamic_add_label 动态添加和删除标签</a></li>
+	<li><a href="ajax_request.html">ajax请求_悬浮框</a></li>
+
+	<li><a href="image_carousel.htm">图片轮播</a></li>
+	<li><a href="paper_3d_fold.html">3D纸片折叠动画效果</a></li>
+	<li><a href="marquee_js.html">图片跑马灯</a></li>
+
+	<li><a href="js_list_slide.html">原生的上拉下拉列表</a></li>
+	<li><a href="js_list_slide2.html">原生的上拉下拉列表222</a></li>
+</ul>
+
+
+国家早期救市的逻辑：<br>1.我们先要保住国有资产。<br>2.我们要指数不下跌。<br>3.小盘股我们不管。<br>后来也陆陆续续的买小盘股，才使得股市稳定性上升了，当然了，不温不火。<br><br>因为他们虽然占据了中国A股市市场市值的主力，但是盘活市场最重要的一点，就是<b>盘活流动性</b>。<br>同理，中国经济主要流动性不在国企（况且养了那么多人），而在于千千万万的中小企业。这些企业有饭吃，中国经济才能长盛不衰。
+
+</body>

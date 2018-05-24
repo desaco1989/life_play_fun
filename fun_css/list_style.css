@@ -1,0 +1,37 @@
+.list_3 {
+    ul {
+        @extend .cf; // 引用清理浮动代码片,看不懂请看本人scss相关教程
+        li {
+            width: 50%;float: left;padding: 1rem 0;
+            outline: 1px solid #ddd;  // 使用 outline 模拟边框 (outline不占据盒子模型)
+            background: #fff;  // 使用白色背景颜色,防止 outline 重叠造成 2px 线条
+            a {
+                display: block;
+                text-decoration: none; // 去除默认下划线
+            }
+            .goods_title,.goods_price {
+                padding: 0 1rem; // 加上左右内填充,防止文字和边框粘结
+                text-align: center;
+            }
+            // 和上一章最大的差异在这里.
+            .goods_photo {
+                width: 100%;padding-bottom: 100%;position: relative;
+                img {
+                    // 限制图片最大宽高,保持不变形
+                    max-width: 80%;max-height: 80%;display: block;
+                    // 未知宽高块级元素水平且垂直局中代码
+                    position: absolute;top: 50%;left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+// 全站范围内用到的图文基本样式
+.goods_title,.goods_price {
+    display: block;position: relative;
+    @include ts(); // 引用文字描白边代码片
+    @include online(1.8rem); // 引用文字超出一行省略号代码片
+}
+.goods_title {color:#000;font-size: 1.2rem;}
+.goods_price {color:#f60;font-size: 1.5rem;font-weight: bold;}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0032)http://www.yxsss.com/ui/pic.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>图片轮播 - javascript - 易U</title>
+</head>
+
+<body>
+<script language="javascript" src="../fun_js/pic.js"></script>
+<script language="javascript">
+	var da=[];
+	<!--  http://10186.yxsss.com/data/upload/2012/11/21/1353478150_9901_4752.jpg -->
+	da.push({src:"../imgs/1353478150_9901_4752.jpg",name:"第一张",link:"http://www.yxsss.com/sg.php?fp=0&tag=%E7%BE%8E%E5%A5%B3"});
+	<!-- http://10186.yxsss.com/data/upload/2012/11/21/1353478162_8546_6161.jpg  -->
+	da.push({src:"../imgs/1353478162_8546_6161.jpg",name:"第二张",link:"http://www.yxsss.com/sg.php?fp=0&tag=%E7%BE%8E%E5%A5%B3"});
+	<!--  http://10186.yxsss.com/data/upload/2012/11/21/1353478182_8116_1748.jpg -->
+	da.push({src:"../imgs/1353478182_8116_1748.jpg",name:"第四张",link:"http://www.yxsss.com/sg.php?fp=0&tag=%E7%BE%8E%E5%A5%B3"});
+	<!-- http://ciaos.yxsss.com/data/upload/2013/01/18/1358475420_6324_6343.jpg  -->
+	da.push({src:"../imgs/1353722374_2092_5298.jpg",name:"第五张",link:"http://ciaos.yxsss.com/yw2048.html"});
+	<!-- http://money.yxsss.com/data/upload/2012/11/24/1353722374_2092_5298.jpg  -->
+	da.push({src:"../imgs/1358475420_6324_6343.jpg",name:"第六张",link:"http://money.yxsss.com/yw616.html"});
+	da.push({src:"../imgs/2.jpg",name:"第7张",link:"http://money.yxsss.com/yw616.html"});
+	da.push({src:"../imgs/5.jpg",name:"第8张",link:"http://money.yxsss.com/yw616.html"});
+	da.push({src:"../imgs/girl.jpg",name:"第9张",link:"http://money.yxsss.com/yw616.html"});
+	
+	var c={
+		 bg:"#333",//右下数字背景颜色
+		 color:"#FFF",//右下数字颜色
+		 cbg:"#FFF",//右下当前数字背景颜色
+		 ccolor:"#333",//右下当前数字颜色
+		 bc:"#ccc",//边框颜色
+		 step:6000 //步长
+		}
+	new IMGS("TopI",900,1300,da,c);
+	<!-- 800,630 -->
+	//new IMGS("id号随便写不要和页面的id重复就可以",宽度,高度,数据[,设置]);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+.cell{
+	height: 40px;
+	vertical-align: middle;
+	display: inline-block;
+	line-height: 40px;
+}
+
+.login_bt{
+	color: red;
+	margin-left: 100px;
+	margin-top: 40px;
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+}
+
+.img_style{
+	width: 20px;
+	height: 20px;
+	vertical-align:middle;
+	padding-left: 20px;
+}
+
+.input_style{
+	padding-left: 5px;
+	height: 30px;
+}
+
+.div_center{  
+	border:1px solid #666;  
+	overflow:hidden;  
+	position:relative;  
+	display:table-cell;  
+	text-align:center;  
+	vertical-align:middle;  
+}
+
+.li_style{
+	list-style:none;
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	font-size: 40px;
+}
+
+.p_style{
+	/*
+	border: 1;*/
+
+	height: 200px;
+	padding:10px;
+	margin: 10px;
+	/*border: 5px solid red;  #dbdbdb */
+	border-bottom: 1px solid #aaaaaa;  
+	border-top:0px;  
+	border-left:0px;  
+	border-right:0px; 
+	font-size: 40px;
+	text-align: center;
+	
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+
+	/*background-color: green;*/
+}
+#takeway_active{
+	vertical-align:middle;
+	width: 30px;
+	height: 30px;
+}
+
+.hr_style{
+	margin-left: 20px
+	border: none;
+	height: 1px;
+	width: 10%;
+	/*margin-left: 10px
+	width: 120px;
+	size :5 ;
+	color:blue;*/
+	
+}
+
+#bg{
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:-1;
+}
+
+#pos_top
+{
+	margin-left: 5px;
+	width:200px;
+	position:relative;
+	top: 22px;
+	background: #FFFFDD;
+}
+
+
+.flex_box {
+	display: flex;
+
+    /*display: -moz-box; 
+    display: -webkit-box; 
+    display: box;*/ 
+    /*display:box;box-flex是css3新添加的盒子模型属性，它的出现可以解决我们通过N多结构、
+    css实现的布局方式。经典的一个布局应用就是布局的垂直等高、水平均分、按比例划分。*/
+    width: 100%; 
+    margin: 10px auto; 
+    padding: 5px; 
+
+    position:relative;
+    top: 30px;
+    /*background: #f0f3f9;*/
+}
+.list {
+	padding: 0 1em; 
+	font: bold 36px/200px monaco; 
+	text-shadow: 1px 1px #eee;
+}
+.navigate_category{
+	
+    /*-moz-box-flex: 1; 
+    -webkit-box-flex: 1; 
+    box-flex: 1;*/
+    
+
+    flex: 0 0 220px;
+    background: #dddaaa;
+}
+.takeway_list {
+    /*-moz-box-flex: 20; 
+    -webkit-box-flex: 20; 
+    box-flex: 20;*/
+    flex: 1;
+    background: red;
+}
+
+#li_default{
+	color: red;
+}
+
+hr{
+
+	border:none;
+	border-top:1px solid red;
+	height:0;
+	margin-left:5px; 
+	margin-right:5px;
+}
+
+.box {border-radius:8px 8px 8px 8px;border:1px solid #000;width:300px; height:80px; margin:0 auto} 
+.box2 img{border-radius:5px} 
+.box3{border-radius:5px 0;  background:#999;width:300px; height:80px; margin:0 auto}
+
+.top{ background:#F00;}
+.foot{background:#800000;}
+
+.fixed_bottom{ position:fixed; left:0px; bottom:0px; width:100%; height:50px; background-color:#000; z-index:9999;}

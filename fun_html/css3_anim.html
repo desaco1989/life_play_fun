@@ -1,0 +1,291 @@
+<!DOCTYPE html> 
+<Html>
+	<HEAD>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+
+		<style> 
+			/*把 "myfirst" 动画捆绑到 div 元素，时长：5 秒*/
+			#myfirst_anim
+			{
+				width:100px;
+				height:100px;
+				background:red;
+				animation:myfirst 5s;
+				-moz-animation:myfirst 5s; /* Firefox */
+				-webkit-animation:myfirst 5s; /* Safari and Chrome */
+				-o-animation:myfirst 5s; /* Opera */
+			}
+
+			@keyframes myfirst
+			{
+				from {background:red;}
+				to {background:yellow;}
+			}
+
+			@-moz-keyframes myfirst /* Firefox */
+			{
+				from {background:red;}
+				to {background:yellow;}
+			}
+
+			@-webkit-keyframes myfirst /* Safari and Chrome */
+			{
+				from {background:red;}
+				to {background:yellow;}
+			}
+
+			@-o-keyframes myfirst /* Opera */
+			{
+				from {background:red;}
+				to {background:yellow;}
+			}
+			/*当动画为 25% 及 50% 时改变背景色，然后当动画 100% 完成时再次改变*/
+			#mysecond_anim
+			{
+				width:100px;
+				height:100px;
+				background:red;
+				animation:mysecond 5s;
+				-moz-animation:mysecond 5s; /* Firefox */
+				-webkit-animation:mysecond 5s; /* Safari and Chrome */
+				-o-animation:mysecond 5s; /* Opera */
+			}
+
+			@keyframes mysecond
+			{
+				0%   {background:red;}
+				25%  {background:yellow;}
+				50%  {background:blue;}
+				100% {background:green;}
+			}
+
+			@-moz-keyframes mysecond /* Firefox */
+			{
+				0%   {background:red;}
+				25%  {background:yellow;}
+				50%  {background:blue;}
+				100% {background:green;}
+			}
+
+			@-webkit-keyframes mysecond /* Safari and Chrome */
+			{
+				0%   {background:red;}
+				25%  {background:yellow;}
+				50%  {background:blue;}
+				100% {background:green;}
+			}
+
+			@-o-keyframes mysecond /* Opera */
+			{
+				0%   {background:red;}
+				25%  {background:yellow;}
+				50%  {background:blue;}
+				100% {background:green;}
+			}
+			/*<!-- 改变背景色和位置 -->*/
+			#mythird_anim
+			{
+				width:100px;
+				height:100px;
+				background:red;
+				position:relative;
+				animation:mythird 5s;
+				-moz-animation:mythird 5s; /* Firefox */
+				-webkit-animation:mythird 5s; /* Safari and Chrome */
+				-o-animation:mythird 5s; /* Opera */
+			}
+
+			@keyframes mythird
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-moz-keyframes mythird /* Firefox */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-webkit-keyframes mythird /* Safari and Chrome */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-o-keyframes mythird /* Opera */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			/*规则和所有动画属性*/
+
+			#myforth_anim
+			{
+				width:100px;
+				height:100px;
+				background:red;
+				position:relative;
+				animation-name:myforth;
+				animation-duration:5s;
+				animation-timing-function:linear;
+				animation-delay:2s;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;
+				animation-play-state:running;
+				/* Firefox: */
+				-moz-animation-name:myforth;
+				-moz-animation-duration:5s;
+				-moz-animation-timing-function:linear;
+				-moz-animation-delay:2s;
+				-moz-animation-iteration-count:infinite;
+				-moz-animation-direction:alternate;
+				-moz-animation-play-state:running;
+				/* Safari and Chrome: */
+				-webkit-animation-name:myforth;
+				-webkit-animation-duration:5s;
+				-webkit-animation-timing-function:linear;
+				-webkit-animation-delay:2s;
+				-webkit-animation-iteration-count:infinite;
+				-webkit-animation-direction:alternate;
+				-webkit-animation-play-state:running;
+				/* Opera: */
+				-o-animation-name:myforth;
+				-o-animation-duration:5s;
+				-o-animation-timing-function:linear;
+				-o-animation-delay:2s;
+				-o-animation-iteration-count:infinite;
+				-o-animation-direction:alternate;
+				-o-animation-play-state:running;
+			}
+
+			@keyframes myforth
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-moz-keyframes myforth /* Firefox */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-webkit-keyframes myforth /* Safari and Chrome */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-o-keyframes myforth /* Opera */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			#myforth2_amin
+			{
+				width:100px;
+				height:100px;
+				background:red;
+				position:relative;
+				animation:myforth_two 5s linear 2s infinite alternate;
+				/* Firefox: */
+				-moz-animation:myforth_two 5s linear 2s infinite alternate;
+				/* Safari and Chrome: */
+				-webkit-animation:myforth_two 5s linear 2s infinite alternate;
+				/* Opera: */
+				-o-animation:myforth_two 5s linear 2s infinite alternate;
+			}
+
+			@keyframes myforth_two
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-moz-keyframes myforth_two /* Firefox */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-webkit-keyframes myforth_two /* Safari and Chrome */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+
+			@-o-keyframes myforth_two /* Opera */
+			{
+				0%   {background:red; left:0px; top:0px;}
+				25%  {background:yellow; left:200px; top:0px;}
+				50%  {background:blue; left:200px; top:200px;}
+				75%  {background:green; left:0px; top:200px;}
+				100% {background:red; left:0px; top:0px;}
+			}
+		</style>
+
+
+	</HEAD>
+
+	<body>
+		<div id="myfirst_anim">把 "myfirst" 动画捆绑到 div 元素，时长：5 秒：</div>
+		<p><b>1,注释：</b>本例在 Internet Explorer 中无效。</p>
+
+		<hr>
+		<div id="mysecond_anim">当动画为 25% 及 50% 时改变背景色，然后当动画 100% 完成时再次改变：</div>
+		<p><b>2,注释：</b>当动画完成时，会变回初始的样式。</p>
+		<p><b>2,注释：</b>本例在 Internet Explorer 中无效。</p>
+
+		<hr>
+		<p><b>3,注释：</b>本例在 Internet Explorer 中无效。</p>
+		<div id="mythird_anim">改变背景色和位置</div>
+
+		<hr>
+		<p><b>4,注释：</b>本例在 Internet Explorer 中无效。</p>
+		<div id="myforth_anim">规则和所有动画属性</div>
+
+		<hr>
+		<p><b>4-1,注释：</b>本例在 Internet Explorer 中无效。</p>
+		<div id="myforth2_amin"></div>
+
+	</body>
+
+</Html>

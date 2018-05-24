@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<HEAD>
+	<meta charset="utf-8">
+	<title>卡片式表格和折叠效果</title>
+	<!-- https://github.com/1432468608/PersonInfoShow  http://www.woshipm.com/ucd/623755.html -->
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," name="viewport" />
+
+	<link href="../fun_css/layout.css" rel="stylesheet" type="text/css" /> 
+	<script src="../fun_library/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(".btn1").click(function(){
+			$("#box").animate({height:"300px"});
+		});
+	</script>
+</HEAD>
+<body>
+	
+
+	<div>盒子左上角和右上角对象圆角测试</div> 
+	<div class="box">DIV盒子圆角</div> 
+	<div>盒子对象个角圆角测试</div> 
+	<div class="box3">DIV盒子圆角</div> 
+	<p>&nbsp;</p> 
+	<div>图片对象圆角测试</div> 
+	<div class="box2"><img src="../imgs/flower.jpg" /></div> 
+
+
+
+	<!-- <div class="top"></div>
+	<div class="foot"></div>
+
+	<div class="box">
+		<canvas id="canvasId" width="200" height="150"></canvas>
+	</div>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvasId");
+		var context = canvas.getContext("2d");
+		context.fillStyle = "#FF0000";//设置填充色（可以是渐变色或半透明色）
+		context.fillRect(0,0,canvas.width,canvas.height);//填充背景我色
+		context.clearRect(0,0,5,5);//抠出一个矩形区域
+	</script> -->
+	<input type="button" id="btn1" name="" value="card_fold">
+
+	<div style="min-height:10px;overflow:hidden">
+		<div style="margin-top:-800px">content more..</div>
+	</div>
+</body>

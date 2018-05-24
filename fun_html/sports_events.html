@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html data-dpr="1" style="font-size: 54px;">
+<head>
+    <!-- http://c.m.500.com/score/match_center/index.html#/basketballleague/statistics/366 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>赛事中心</title>
+	<link href="http://tccache.500.com/mobile/touch/css/league.css" type="text/css" rel="stylesheet">
+	<script src="http://tccache.500.com/mobile/touch/js/flexible.js"></script>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<style></style>
+
+	<script type="text/javascript" src="http://sdk.talkingdata.com/app/h5/v1/websdk/js/sdk_release.js"></script>
+	<script type="text/javascript" async="" src="/500cache/mobile/touch/js/log.min.js?v=20150119"></script>
+</head>
+
+<body style="font-size: 12px;">
+	<application>
+		<!--<if: __visibleMap["match-center-home-page"] />-->
+		<!--<if: __visibleMap["match-center-match-football-page"] />-->
+		<!--<if: __visibleMap["match-center-match-basketball-page"] />-->
+		<!--<if: __visibleMap["match-center-football-league-page"] />-->
+		<!--<if: __visibleMap["match-center-basketball-league-page"] />--><!--<component>: match-center-basketball-league-page-->
+		<div class="wrapper l-full l-flex-column">
+		<header class="header inte-header-b">
+			<div class="info"><a href="javascript:;" onclick="window.history.back()" class="back-icon">返回</a>
+				<div class="info-c">
+					<div class="info-pic">
+						<img src="http://liansai.500.com/static/soccerdata/images/BasketballMatchPic/73bb72e7e33d8864721128ca4b0ab5fd.png">
+					</div>
+					<div class="info-itm">
+						<h1>NBA</h1>
+					</div>
+				</div>
+			</div>
+			<!--菜单切换-->
+			<nav class="sk-tab">
+				<a href="javascript:;">赛程<!--<if: tab=='schedule' />--></a>
+				<a href="javascript:;">排名<!--<if: tab=='rank' />--></a>
+				<a href="javascript:;" class="cur">统计<!--<if: tab=='statistics' />--><i class="sktab-arrow"></i></a>
+			</nav>
+		</header>
+		<!--<if: tab=='schedule' />-->
+		<!--<if: tab=='rank' />-->
+		<!--<if: tab=='statistics' />--><!--<component>: match-center-basketball-statistics-page--><!--<if: league.simplegbname=='NBA' />--><section class="count-main l-flex-1 l-relative">
+		<div class="l-flex-row l-full">
+			<!--left scroll-->
+			<div class="plleft l-flex-column">
+				<ul class="plleft-list l-scroll-y l-flex-1 ">
+					<li class="cur">得分
+					</li>
+					<li>失分
+					</li>
+					<li>投篮命中率
+					</li>
+					<li>三分命中率
+					</li>
+					<li>罚球命中率
+					</li>
+					<li>
+						篮板
+					</li>
+					<li>
+						助攻
+					</li>
+					<li>盖帽
+					</li>
+					<li>抢断
+					</li>
+					<li>失误
+					</li>
+					<li>犯规
+					</li>
+				</ul>
+			</div>
+			<!--right scroll-->
+			<!--<if: statisticsInfo.length>0 />-->
+			<div class="plright l-flex-1 l-flex-column">
+				<h2 class="average-tit"><em>球队</em>场均得分</h2>
+				<ul class="average-list l-flex-1 l-scroll-y">
+					<!--<repeat>: s,idx in statisticsInfo--><!--[repeat-item]s,idx in statisticsInfo--><li class="average-item clear">
+					<div class="aver-team">
+						<em class="aver-turn">1</em>
+						<span class="aver-team-img">
+							<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/47b9ae6442002effb30cdc4ecc233f3f.png">
+							<em class="aver-team-name">勇士</em>
+						</span>
+					</div>
+					<span class="aver-score">115.8</span>
+				</li><!--[repeat-item]s,idx in statisticsInfo-->
+				<li class="average-item clear">
+					<div class="aver-team">
+						<em class="aver-turn">2</em>
+						<span class="aver-team-img">
+							<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/667707fe8fed59b5d05cbee66ef09a31.png">
+							<em class="aver-team-name">火箭</em>
+						</span>
+					</div>
+					<span class="aver-score">115.6</span>
+				</li><!--[repeat-item]s,idx in statisticsInfo-->
+				<li class="average-item clear">
+					<div class="aver-team">
+						<em class="aver-turn">3</em>
+						<span class="aver-team-img">
+							<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/3f741fe3ac6f1a4d508478c43b2f05b4.png">
+							<em class="aver-team-name">掘金</em>
+						</span>
+					</div>
+					<span class="aver-score">111.4</span>
+				</li><!--[repeat-item]s,idx in statisticsInfo--><li class="average-item clear">
+				<div class="aver-team">
+					<em class="aver-turn">4</em>
+					<span class="aver-team-img">
+						<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/f4b49638e5c8174f100f58b6450746a4.png">
+						<em class="aver-team-name">骑士</em>
+					</span>
+				</div>
+				<span class="aver-score">110</span>
+			</li><!--[repeat-item]s,idx in statisticsInfo--><li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">5</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/2550d8bd0f3e38b7ca81ddb64fb1d3ed.png">
+					<em class="aver-team-name">奇才</em>
+				</span>
+			</div>
+			<span class="aver-score">109.5</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">6</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/b24448def8a79f07b0d71ee63fe32fd1.png">
+					<em class="aver-team-name">快船</em>
+				</span>
+			</div>
+			<span class="aver-score">108.2</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">7</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/99a07dbcf31b00102c1a65c670cfa376.png">
+					<em class="aver-team-name">开拓者</em>
+				</span>
+			</div>
+			<span class="aver-score">108.1</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">8</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/c12ce3ec8c6341e1ef99152382e8de4b.png">
+					<em class="aver-team-name">凯尔特人</em>
+				</span>
+			</div>
+			<span class="aver-score">107.7</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">9</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/523d63443f3f761ebac103ea86310974.png">
+					<em class="aver-team-name">猛龙</em>
+				</span>
+			</div>
+			<span class="aver-score">107.2</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">10</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/271349c8276d6847613df11feae05a6d.png">
+					<em class="aver-team-name">雷霆</em>
+				</span>
+			</div>
+			<span class="aver-score">107.1</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">11</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/41edab1b88bdc81ad0e8dfe22812c2f6.png">
+					<em class="aver-team-name">太阳</em>
+				</span>
+			</div>
+			<span class="aver-score">106.9</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">12</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/a6c7b962faff758fcee526f3b507e11b.png">
+					<em class="aver-team-name">马刺</em>
+				</span>
+			</div>
+			<span class="aver-score">106.1</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">13</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/2f2808c53ebc8baf1a0dddb179f3c4d7.png">
+					<em class="aver-team-name">篮网</em>
+				</span>
+			</div>
+			<span class="aver-score">105.9</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">14</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/7fa6cbf3d5fa3c6cf0949227751da896.png">
+					<em class="aver-team-name">黄蜂</em>
+				</span>
+			</div>
+			<span class="aver-score">105.2</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">15</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/9d04864d2131aac658f6802b146e41b2.png">
+					<em class="aver-team-name">森林狼</em>
+				</span>
+			</div>
+			<span class="aver-score">105</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">16</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/6ab1fbfd65cf80e06c5d911b25fbcc1f.png">
+					<em class="aver-team-name">尼克斯</em>
+				</span>
+			</div>
+			<span class="aver-score">104.8</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">17</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/5596b759d690d1180cae9137843ab008.png">
+					<em class="aver-team-name">湖人</em>
+				</span>
+			</div>
+			<span class="aver-score">104.7</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">18</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/0ec274779da4b6e4d701a57eababee87.png">
+					<em class="aver-team-name">雄鹿</em>
+				</span>
+			</div>
+			<span class="aver-score">104.6</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">19</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/72407e83fc4959ef66e07aee1ccb2541.png">
+					<em class="aver-team-name">步行者</em>
+				</span>
+			</div>
+			<span class="aver-score">104.3</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">20</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/c1756f17c44441cc3a0bf936ffd6df20.png">
+					<em class="aver-team-name">鹈鹕</em>
+				</span>
+			</div>
+			<span class="aver-score">103.9</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">21</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/433de350951067825da5de0e29be98f8.png">
+					<em class="aver-team-name">老鹰</em>
+				</span>
+			</div>
+			<span class="aver-score">102.9</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">22</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/125345c51a0838362fefdb21b79a15cf.png">
+					<em class="aver-team-name">热火</em>
+				</span>
+			</div>
+			<span class="aver-score">102.8</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">23</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/260a906129438a7ece93213346b0376c.png">
+					<em class="aver-team-name">公牛</em>
+				</span>
+			</div>
+			<span class="aver-score">102.4</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">24</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/46861ca1a0c82c2d6cbc21eb2c9f5fc5.png">
+					<em class="aver-team-name">76人</em>
+				</span>
+			</div>
+			<span class="aver-score">102.3</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">25</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/7b20d5a144fb9c30cda098b8e24ed2c9.png">
+					<em class="aver-team-name">国王</em>
+				</span>
+			</div>
+			<span class="aver-score">102.3</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">26</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/a2ed43ce3cc2d6be54495c162ac25a19.png">
+					<em class="aver-team-name">活塞</em>
+				</span>
+			</div>
+			<span class="aver-score">101.1</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">27</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/951ad10f242d5f0e78f0efabc3164f94.png">
+					<em class="aver-team-name">灰熊</em>
+				</span>
+			</div>
+			<span class="aver-score">100.9</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">28</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/9310128140f972fef9bed8207632aa7e.png">
+					<em class="aver-team-name">爵士</em>
+				</span>
+			</div>
+			<span class="aver-score">100.6</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">29</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/27012eeec44278b11e6b85746f15f6a1.png">
+					<em class="aver-team-name">魔术</em>
+				</span>
+			</div>
+			<span class="aver-score">100.6</span>
+		</li><!--[repeat-item]s,idx in statisticsInfo-->
+		<li class="average-item clear">
+			<div class="aver-team">
+				<em class="aver-turn">30</em>
+				<span class="aver-team-img">
+					<img src="http://liansai.500.com/static/soccerdata/images/BasketBallTeamPic/3bb9eca6933a135327d3f0f2aaba4da5.png">
+					<em class="aver-team-name">小牛</em>
+				</span>
+			</div>
+			<span class="aver-score">98</span>
+		</li><!--</repeat>: s,idx in statisticsInfo-->
+	</ul>
+</div>
+<!--<if: statisticsInfo.length==0 />-->
+</div>
+</section><!--</component>: match-center-basketball-statistics-page-->
+
+<!--<if: isNoData />-->
+
+</div><!--</component>: match-center-basketball-league-page-->
+</application>
+
+<script src="http://m.c.500.com/js/esun/??base/esun_def.js,config/env.js,util/cookie.js,util/platform.js"></script>
+
+<script src="http://m.c.500.com/js/??lib/drunk/drunk.js,lib/drunk/drunk.application.js,vendor/fastclick/fastclick.js,vendor/sockjs/sockjs.min.js"></script>
+
+<script src="http://m.c.500.com/ts/es/??util/querystring.js,util/ajax.js"></script>
+
+<script src="/js/lib/drunk/ListView.js"></script>
+<script src="/score/match_center/??common/resourece.js,common/lazyload.js,home/home.js,match/football.js,match/basketball.js,league/football/football.js,league/football/schedule.js,league/football/integral.js,league/football/statistics.js,league/basketball/basketball.js,league/basketball/schedule.js,league/basketball/rank.js,league/basketball/statistics.js"></script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		window.FastClick && window.FastClick.attach(document.body);
+
+		var platform = esun.use('esun.util.platform');
+
+		platform.dataChanged(function () {
+			location.reload();
+		});
+
+		platform.ready(function () {
+			if (platform.isApp) {
+				EsApp.invoke('titleBar', {isShow: '0' , title: '赛事中心'});
+			}
+		});
+	});
+	drunk.Application.start(document.querySelector('application'));
+</script>
+
+<script type="text/javascript">
+	(function (load) {
+		"complete" === document.readyState ? load() : window.addEventListener('load', load);
+	})(function () {
+		var lg = document.createElement('script');
+		lg.type = 'text/javascript';
+		lg.async = true;
+		if(document.domain == "m.500.com"){
+			lg.src = "/cache/mobile/touch/js/log.min.js?v=20150119";
+		}
+		else{
+			lg.src = "/500cache/mobile/touch/js/log.min.js?v=20150119";
+		}
+		document.head.appendChild(lg);
+	});
+</script>
+<script type="text/javascript" src="http://sdk.talkingdata.com/app/h5/v1?appid=DEB000C10DF7CD55310B0437199A6E0A&amp;vn=tcdxt&amp;vc=1.0"></script>
+<script>
+	(function() {
+		if(document.domain == "m.500.com") {
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "//hm.baidu.com/hm.js?4f816d475bb0b9ed640ae412d6b42cab";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		}
+	})();
+</script>
+
+</body>
+</html>

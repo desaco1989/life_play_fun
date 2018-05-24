@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/javascript" href="../fun_library/jquery-3.2.1.min.js"> -->
+	<script src="../fun_library/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+</head>  
+
+<body>  
+	<div id="o" style="width:400px;height:200px;border:1px solid #CCCCCC;">  
+		<div id="m" style="width:200px;height:100px;border:1px solid #ff0000;">  
+			<div id="i" style="width:100px;height:50px;border:1px solid #00ff00;">  
+			</div>  
+		</div>  
+	</div>  
+	<hr>
+	<div id="o" style="width:400px;height:200px;border:1px solid #CCCCCC;">  
+		<div id="m" style="width:200px;height:100px;border:1px solid #ff0000;">  
+			<div id="i" style="width:100px;height:50px;border:1px solid #00ff00;">  
+			</div>  
+		</div>  
+	</div> 
+	<hr>
+	<!-- <div > </div> -->
+	<ul>
+		<li class="current" style="width: 200px;height: 50px;background: red;">
+			desaco 1
+			<div class="div" style="display: none;" > DIV 1111</div>
+		</li>
+		<hr>
+		<li class="current" style="width: 200px;height: 50px;background: red;"> 
+			desaco 2
+			<div class="div" style="display: none;" > DIV 2222</div>
+		</li>
+		<hr>
+		<li class="current" style="width: 200px;height: 50px;background: red;"> 
+			desaco 3
+			<div class="div" style="display: none;" > DIV 3333</div>
+		</li>
+		<hr>
+		<li class="current" style="width: 200px;height: 50px;background: red;"> 
+			desaco 4
+			<div class="div" style="display: none;" > DIV 4444</div>
+		</li>
+		<hr>
+	</ul>
+
+
+	<a id="user" class="test" href="#">User</a>
+	<hr>
+	<a id="admin" class="test" href="#">admin</a>
+	<hr>
+	<a id="student" name="Tom" href="#">Student</a>
+	<hr>
+	<input id="btn" type="button" name="ok" value="Hello" />
+</body>
+
+<!-- 这个函数重写了juqery的 $ 方法-->
+<!-- <script type="text/javascript">  
+		function $(id){  
+			return document.getElementById(id);  
+		}  
+		function altin(){  
+			alert("in");  
+		}  
+		function altmiddle(){  
+			alert("middle");  
+		}  
+		function altout(){  
+			alert("out")  
+		}  
+		window.onload=function() {  
+			$('o').onclick = altout;  
+    //$('m').onclick = altmiddle;  
+    $('m').addEventListener('click',altmiddle,true);  
+    $('i').onclick = altin;  
+}  
+</script>  -->
+
+<script type="text/javascript">
+	$('.current').click(function(){
+
+		if($(".div").is(":hidden")){
+       		$(".div").show();    //如果元素为隐藏,则将它显现
+       	}else{
+      		$(".div").hide();     //如果元素为显现,则将其隐藏
+      	}
+      	alert($(this).text());
+
+      	// if($(".div").siblings(".selected").is(":hidden")){
+      	// 	$(".div").siblings(".selected").show();
+      	// 	$(".div").siblings(".selected").css("background", "yellow"); 
+      	// }else{
+      	// 	$(".div").siblings(".selected").hide();
+      	// }
+
+      	// $("div").siblings(".selected").css("background", "yellow");  
+
+      });
+
+
+
+	// $('#div').click(function(e){  
+ //    alert($(this).attr('id'));  
+	// });
+
+  </script>
+
+  <script>
+  	$(function () {
+  		$(".test").click(function () {
+  			var val=$(this).attr("id");
+  			alert(val);
+  		})
+
+  		$("#student").click(function () {
+  			var val=$(this).attr("name");
+  			alert(val);
+  		})
+  		$("input").click(function () {
+  			var val=$(this).val();
+  			alert(val)
+  		})
+  	})
+  </script>
+
+  </html>

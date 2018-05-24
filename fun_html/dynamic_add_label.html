@@ -1,0 +1,50 @@
+<!doctype html>
+<head>
+	<title>动态加载标签</title>
+	<link rel="stylesheet" type="text/css" href="../fun_css/layout.css">
+	<link rel="stylesheet" type="text/css" href="">
+	<script src="/life_play_fun/fun_library/dropload.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/life_play_fun/fun_library/dropload.min.js">
+
+</head>
+
+<script type="text/javascript">
+	function add_data(){
+		var para = document.createElement("p");
+		var txt1 = document.createTextNode("I inserted ");
+		var emphasis = document.createElement("em");
+		var txt2 = document.createTextNode("this");
+		var txt3 = document.createTextNode(" content.");
+		para.appendChild(txt1);
+		emphasis.appendChild(txt2);
+		para.appendChild(emphasis);
+		para.appendChild(txt3);
+		var testdiv = document.getElementById("data_lists");
+		testdiv.appendChild(para);
+	}
+
+</script>
+<script src="/life_play_fun/mock_ajax_request/jquery.1.11.1.js"></script>
+<script src="/life_play_fun/mock_ajax_request/jquery.mockjax.js"></script>
+<script src="/life_play_fun/mock_ajax_request/jquery.mockjson.js"></script>
+<script type="text/javascript">
+	function ajax_req_method(){
+		var isAjaxMocked = true;
+		if (isAjaxMocked) {
+			$.mockjax({
+				url: '/WebApi/test.html',
+				status: 200,
+				responseTime: 900,
+				responseText: {'info': 'hello world', 'status': 'success'}
+			});
+		}
+
+	}
+
+</script>
+<body>
+	JS把内容动态插入到DIV   JS添加html代码块
+	<br>
+	<input type="button" name="add_data" value="动态添加数据" onclick="add_data()">
+	<div id="data_lists"></div>
+</body>
